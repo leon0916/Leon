@@ -1,0 +1,180 @@
+\documentclass[letterpaper, 12pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi) 
+\usepackage{lipsum} %This package just generates Lorem Ipsum filler text. 
+\usepackage{fullpage} % changes the margin
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{siunitx} %\SI{value}{unit commands}
+\usepackage{graphicx}
+\usepackage{tabularx,ragged2e,booktabs,caption}
+
+\begin{document}
+	%Header-Make sure you update this information!!!!
+	
+	%\hfill \textbf{FirstName LastName} \\
+	\noindent Xiaoliang Cheng\\
+	\hfill PHYS351001 Contemporary Electronics Laboratory\\
+	\hfill Laboratory Report 1\\ 
+	\hfill Due Date: 23 August 2019
+	
+%\begin{center}
+%	\textbf{Prelab Exercises}
+%\end{center}
+	
+	\section*{Objective}
+	To obtain familiarity with multimeter and with constructing circuits on breadboard; to make a link between the theory (Ohm's Law) with actual measurement.
+	
+	\section*{Procedure}
+	
+	
+	\section*{Data}
+	\underline{Procedure 3:}\\
+	
+	\begin{tabular}{c c c c}
+		\toprule
+		\bf Resistor & \bf Color Code & \bf Measurement & \bf \% Difference \\ \midrule
+		1 & 680 & 723.22 & 6.3 \\
+		2 & 5700  & 5187.3 & 8.99 \\
+		3 & 48700 & 48534 & 0.34\\ \bottomrule
+	\end{tabular}\\
+
+	\noindent \underline{Procedure 4:}\\
+	
+	\begin{tabular}{c c}\toprule
+		\bf Power Supply & \bf Voltage\\ \midrule
+		+5 VDC & 4.9385\\
+		+12 VDC  & 11.7529\\
+		-12 VDC & -11.9620\\ \bottomrule
+	\end{tabular}\\
+
+	
+	\noindent \underline{Procedure 5:}\\
+	\begin{tabular}{c c}\toprule
+		\bf Resistor(around $\SI{2000}{\Omega}$) & \bf Resistance ($\Omega$)\\ \midrule
+		1 & 1991.9\\
+		2 & 1994.6\\
+		3 & 2008.2\\
+		4 & 1971.7\\
+		5 & 1978.8\\
+		6 & 1999.1\\ \bottomrule
+	\end{tabular}\\
+	
+	\noindent \underline{Procedure 6:}\\
+	\begin{tabular}{c c c}\toprule
+		\bf Location & \bf Voltage ($V$) & \bf Current ($A$) \\ \midrule
+		AB & \SI{2e-6} & 0.00247\\
+		BC & 4.926 & - \\  \bottomrule
+	\end{tabular}\\
+
+%	\noindent \underline{Procedure 7:}\\
+	%\begin{tabular}{c c c}\toprule
+	%	\bf Location & \bf Measured Voltage ($V$) & \bf Expected Voltage ($V$) \\ \midrule
+	%	EF & 3.9037 & 3.90522\\
+	%	FG & 3.9097 & 3.91051\\
+	%	HG & 3.9366 & 3.93718\\
+	%	EH & 11.7516 & 11.7516 \\  \bottomrule
+	%\end{tabular}\\
+	
+	\section*{Calculations}
+	\underline{Procedure 3:}\\
+	\[
+	\% \mathrm{difference}=(723.22-680)/680=6.3\%
+	\]
+	\[
+	\% \mathrm{difference}=(5700-5187.3)/5700=8.99\%
+	\]
+	\[
+	\% \mathrm{difference}=(48700-48534)/48700=0.34\%
+	\]\\
+	
+	\noindent \underline{Procedure 6:}
+	\[
+	I=V/R=(\SI{4.9268}{V})/(\SI{1991.9}{\Omega})=\SI{0.00247}{A}.
+	\]\\
+	
+	\noindent \underline{Procedure 7:}\\
+	\[
+	R_{\mathrm{total}}={(1991.9+1994.6+2008.2)}\Omega=\SI{5994.7}{\Omega}
+	\]
+	\[
+	I=V/R_{\mathrm{total}}=\SI{(11.7529/5994.7)}{A}=\SI{0.00196055}{A}
+	\]
+	\[
+	V_1=IR_1={(0.00196055*1991.9)}{V}=\SI{3.90522}{V}
+	\]
+	\[
+	V_2=IR_2={(0.00196055*1994.6)}{V}=\SI{3.91051}{V}
+	\]
+	\[
+	V_2=IR_2={(0.00196055*2008.2)}{V}=\SI{3.93718}{V}
+	\]
+	
+	
+	% to comment sections out, use the command \ifx and \fi. Use this technique when writing your pre lab. For example, to comment something out I would do:
+	%  \ifx
+	%	\begin{itemize}
+	%		\item item1
+	%		\item item2
+	%	\end{itemize}	
+	%  \fi
+	
+	\section*{Questions}
+	Q1A: \emph{If a volt meter has an input resistance of $\SI{e7}{\Omega} $, what is the power required to measure one volt?}\\
+	A1A: $P=V^2/R=(\SI{1}{V})^2/(\SI{e7}{\Omega})=\SI{e-7}{W}.$\\
+	
+	\noindent Q1B: \emph{What power should it be required if the input resistance was $\SI{1000}{\Omega}$?}\\
+	A1B: $P=V^2/R=(\SI{1}{V})^2/(\SI{e3}{\Omega})=\SI{e-3}{W}.$\\
+	
+    \noindent Q2: \emph{Calculate the visible light power incident on a $\SI{1}{cm}$ square receptor at $1$ meter from a $\SI{100}{W}$ incandescent lamp, which is $30\%$ efficient for visible light?}\\
+	A2: 
+	\[
+	\text{Power of Visible Light}: P_v=(30\%)(\SI{100}{W})=\SI{30}{W}
+	\]
+	\[
+	\text{Intensity of Visible Light 1 meter away}: I=\dfrac{P}{4\pi r^2}=\dfrac{\SI{30}{W}}{\SI{4\pi}{m^2}}=\SI{2.4}{W/m^2}  
+	\]
+	\[
+	\text{Power on receptor}: P_r=IS=(\SI{2.4}{W/m^2})(\SI{1e-4}{m^2})=\SI{2.4e-4}{W}
+	\]\\
+	
+	\noindent Q3: \emph{In the 1920's who developed the Electronic Color Code used for resistors?}\\
+	A3: It was was developed in the early 1920s by the Radio Manufacturers Association (RMA).\\
+	
+	\noindent Q4: \emph{If you see a resistor with four bands: violet, orange, green, silver, calculate the calue this resistor should have. Calculate the range of values that it might have given the resistance tolerance noted on the resistor.}\\
+	A4: $R= \SI{74e5}{\Omega}\enspace (\pm 10\%)=(7.4\times 10^6 \pm 74000)\enspace \Omega.$\\
+	
+	\noindent Q5: \emph{How well do the resistances from the color codes agree within tolerance with the measured resistance in each case?}\\
+	A5: Percent difference is calculated in Calculation section. Percent difference is compared with marked tolerance in the following table:\\
+	
+	\begin{tabular}{c c c c}
+		\toprule
+		\bf Resistor & \bf \% Difference & \bf Tolerance (\%) & \bf Agreement \\ \midrule
+		1 & 6.3 & 5 & Does not agree completely but close\\
+		2 & 8.99 &  5  & Does not agree very well\\
+		3 & 0.34 & 5 & agrees perfectly within tolerance\\ \bottomrule
+	\end{tabular}\\
+
+	
+
+	
+	
+	
+	
+
+
+
+	
+	\section*{Conclusions}
+	\lipsum[7]
+	
+	%\section*{Attachments}
+	%Make sure to change these
+	Lab Notes, HelloWorld.ic, FooBar.ic
+	%\fi %comment me out
+	
+	%\begin{thebibliography}{9}
+		%\bibitem{Robotics} Fred G. Martin \emph{Robotics Explorations: A Hands-On Introduction to Engineering}. New Jersey: Prentice Hall.
+		%\bibitem{Flueck}  Flueck, Alexander J. 2005. \emph{ECE 100}[online]. Chicago: Illinois Institute of Technology, Electrical and Computer Engineering Department, 2005 [cited 30 August 2005]. Available from World Wide Web: (http://www.ece.iit.edu/~flueck/ece100).
+	%\end{thebibliography}
+	
+\end{document}
